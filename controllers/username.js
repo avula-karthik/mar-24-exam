@@ -3,7 +3,7 @@ let username = [];
 function getUsername(req, res) {
     res.json(username);
 }
-const creatUsername = [
+const createUsername = [
     body('name')
         .trim()
         .notEmpty()
@@ -25,8 +25,8 @@ const creatUsername = [
             let { name } = req.body;
             console.log(req.body);
             username.push({ name });
-            res.json({ status: 'adding username successfully' });
+            res.json({ status: 'added user successfully' });
         }
     },
 ];
-module.exports = { getUsername, creatUsername };
+module.exports = { getUsername, createUsername };
